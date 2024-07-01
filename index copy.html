@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Segmentor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="https://www.titansoftime.com/webgl/Stats.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.8/themes/default/style.min.css"/>
+    <script src="./jquery/jquery.min.js"></script>
+    <script src="./jquery/jstree.min.js"></script>
+    <script src="./jquery/jquery.scrollbar.min.js"></script>
+    <script src="./jquery/jquery.validate.min.js"></script>
+</head>
+<body>
+    <div id="left-panel">
+        <label for="actual-btn"class="button-like">Import Bone</label>
+        <input type="file" id="actual-btn" multiple hidden />
+
+        <label for="draw-points"class="button-like">3DPoint </label>
+        <input type="button" id="draw-points" hidden />
+        <div id="point-options">
+            <label><input type="radio" name="landmark" value="Femur Center"> Femur Center</label><br>
+            <label><input type="radio" name="landmark" value="Landmark 2"> Landmark 2</label><br>
+            <label><input type="radio" name="landmark" value="Landmark 3"> Landmark 3</label>
+        </div>
+
+
+
+    <label for="ProjectLine" class="button-like">Project Line on plane</label>
+    <input type="button" id="ProjectLine" hidden />
+    <br>
+    <label for="Clip" class="button-like">Resected Bone (Clip)</label>
+    <input type="button" id="Clip" hidden />
+    <label for="UnClip" class="button-like">Resected Bone (Unclip)</label>
+    <input type="button" id="UnClip" hidden />
+        <select name="Views" id="Views">
+            <option value="Front-view">Select-view</option>
+            <option value="Front-view">Front-view</option>
+            <option value="Back-view">Back-view</option>
+            <option value="Top-view">Top-view</option>
+            <option value="Bottom-view">Bottom-view</option>
+            <option value="Side 1-view">Side 1-view</option>
+            <option value="Side 2-view">Side 2-view</option>
+            <option value="Orthographic">Orthographic</option>
+            <option value="Isometric">Isometric</option>
+        </select>
+    </div>
+    <div id="right-panel">
+        <div id="canvas-container"></div>
+    </div>
+    
+    <script type="module" src="js/ThreeCSG.js"></script>
+    <script type="module" src="./js/init.js"></script>
+</body>
+</html>

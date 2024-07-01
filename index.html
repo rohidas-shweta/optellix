@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>knee-assign</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="https://www.titansoftime.com/webgl/Stats.min.js"></script>
+</head>
+
+<body>
+    <script type="module" src="./js/init.js"></script>
+    <div id="canvas-container"> </div>
+    <!-- <pre id="logs" class="tree">
+        
+    </pre> -->
+    <label class="control-label"for="actual-btn">Import Bone</label>
+    <input type="file" id="actual-btn" multiple hidden />
+    
+    <label class="control-label"for="remove">Delete</label>
+    <input type="button" id="remove" hidden />
+    
+    <div id="point-options">
+        <label><input type="radio" name="landmark" value="Femur Center"> Femur Center</label><br>
+        <label><input type="radio" name="landmark" value="Hip Center"> Hip Center</label><br>
+        <label><input type="radio" name="landmark" value="Femur Proximal Canal"> Femur Proximal Canal</label><br>
+        <label><input type="radio" name="landmark" value="Femur Distal Canal"> Femur Distal Canal</label><br>
+        <label><input type="radio" name="landmark" value="Medial Epicondyle"> Medial Epicondyle</label><br>
+        <label><input type="radio" name="landmark" value="Lateral Epicondyle"> Lateral Epicondyle</label><br>
+        <label><input type="radio" name="landmark" value="Distal Medial Pt"> Distal Medial Pt</label><br>
+        <label><input type="radio" name="landmark" value="Distal Lateral Pt"> Distal Lateral Pt</label><br>
+        <label><input type="radio" name="landmark" value="Posterior Medial Pt"> Posterior Medial Pt</label><br>
+        <label><input type="radio" name="landmark" value="Posterior Lateral Pt"> Posterior Lateral Pt</label><br>
+        <select name="Views" id="Views">
+            <option value="Front-view">Select-view</option>
+            <option value="Front-view">Front-view</option>
+            <option value="Back-view">Back-view</option>
+            <option value="Side 1-view">Side 1-view</option>
+            <option value="Side 2-view">Side 2-view</option>
+            <option value="Top-view">Top-view</option>
+            <option value="Bottom-view">Bottom-view</option>
+        </select>
+        <label class="control-label"for="axesAndPlanes"class="button-like">Update</label>
+        <input type="button" id="axesAndPlanes" hidden />
+        <button id="axesAndPlanes" onclick="createAxes()"></button>
+        
+    </div>
+    <!-- <div id="controls-container">
+        <div class="control-group">
+            <p>Varus/Valgus</p>
+            <button id="decrease-varus">-</button>
+            <span id="value-varus">0</span>
+            <button id="increase-varus">+</button>
+        </div>
+        <div class="control-group">
+            <p>Flexion/Extension</p>
+            <button id="decrease-flexion">-</button>
+            <span id="value-flexion">0</span>
+            <button id="increase-flexion">+</button>
+        </div>
+    </div> -->
+    
+        <div id="varus-valgus-container">
+            <p>Varus/Valgus</p>
+            <button id="increase-varus">+</button>
+            <span id="value-varus">0</span>
+            <button id="decrease-varus">-</button>
+        </div>               
+ 
+    <div id="flex-ext-container">
+        <p>Flexion/Extension</p>
+        <button id="increase-flexion">+</button>
+        <span id="value-flexion">0</span>
+        <button id="decrease-flexion">-</button>
+    </div>
+    <!-- 
+    <label class="control-label"for="Clip">Resected Bone(Clip)</label>
+    <input type="button" id="Clip" hidden />
+    
+    <label class="control-label"for="UnClip">Resected Bone(Unclip)</label>
+    <input type="button" id="UnClip" hidden /> -->
+    
+
+</body>
+
+</html>
